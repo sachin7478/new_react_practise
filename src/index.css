@@ -1,0 +1,35 @@
+/* COLOR Scheme
+  Light Lime: #abd699
+  Fresh Lemon: #ffe26a
+  Teal: #75c9b7
+  Mint: #c7ddcc
+  Navy: #16123f
+===== */
+
+.bodyContainer {
+  background-color: #abd699;
+  min-height: 100%;
+}
+.text-sec {
+  color:#c7ddcc
+}
+.side-list-group .list-group-item.active {
+  color:#16123f;
+  background-color:#ffe26a;
+  border-color:#16123f;
+}
+.text-white{
+  color:#c7ddcc
+}
+.text-navyBlue{
+  color:#16123f;
+}
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
