@@ -1,6 +1,5 @@
 import {useState} from 'react';
-import store from '../redux/store/store'
-import {tabSelection} from '../redux/actions/actions';
+import {tabSelectionAction} from '../redux/actions/actions';
 import { useSelector, useDispatch } from 'react-redux';
 const SideBar = (props) => {
   let selectedItem = useSelector((state) => {return state.tabReducer.selectedTab}) || 'note_app';
@@ -13,7 +12,7 @@ const SideBar = (props) => {
   }
 
   function itemChanged (tab_name) {
-    dispatch(tabSelection(tab_name))
+    dispatch(tabSelectionAction(tab_name))
     let prevTabs = tabs
     for( const index in prevTabs) {
       prevTabs[index].active = prevTabs[index].name === tab_name;

@@ -20,7 +20,7 @@ const Header = (props) => {
 const Footer = (props) => {
   return(
     <>
-      <footer style={headerStyle} class="footer" >
+      <footer style={headerStyle} className="footer" >
         <div  className="px-2">
           <div className="row">
             <div className="py-2"><h5 className="text-sec text-center">Copyrights <span style={{fontSize:'21px', verticalAlign:'center'}}>©</span>  2022-2023 All Rights Reserved.</h5></div>

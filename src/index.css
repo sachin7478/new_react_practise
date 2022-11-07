@@ -24,6 +24,9 @@
 .text-navyBlue{
   color:#16123f;
 }
+.bg-navyBlue{
+  background-color:#16123f;
+}
 .footer{
   position: fixed;
   left: 0;
@@ -32,4 +35,21 @@
   background-color: red;
   color: white;
   text-align: center;
+}
+.create-note div {
+  display: flex;
+}
+.create-note div textarea {
+  padding:5px;
+  min-width: 250px;
+  font-size:21px;
+  border-radius: 5%;
+  border: none;
+}
+.create-note div button {
+  margin: 0px 10px;
+  vertical-align: auto !important;
+  font-size:21px;
+  color: #16123f; /*rgb(14, 132, 14);*/
+  font-weight:700;
 }
