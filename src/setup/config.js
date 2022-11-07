@@ -1,5 +1,5 @@
 import NoteApp from "../components/NoteApp";
-import WheatherApp from "../components/GitUsers";
+import GitUsers from "../components/GitUsers";
 const config = {
   header:{},
   sidebar:{
@@ -12,7 +12,7 @@ const config = {
         title: 'Notes App'
       },
       {
-        component: WheatherApp,
+        component: GitUsers,
         view_name: 'Git Hub User Api',
         name: 'git_hub_user',
         desc: 'To show the git hub user details using api',
