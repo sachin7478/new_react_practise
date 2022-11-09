@@ -1,12 +1,12 @@
 import Jubmotron from "../common/Jumbotron";
 import {useEffect, useState} from 'react';
+var time;
 const GitUsers = (props) => {
   let [userState, setState] = useState({user:'sachin7478', changeUser:false});
   let [urlLoaded, setUrlLoaded] = useState(false);
   useEffect(
     () => {
-      let debounce = setTimeout(getData(),5000)
-      console.log(debounce);
+      getData();
     },
     [urlLoaded]
   )
@@ -26,7 +26,9 @@ const GitUsers = (props) => {
 
   let userIdchanged = (e) => {
     setState((prev) => { return {...prev, user:e.target.value}});
-    setTimeout(()=>{ setUrlLoaded((prev)=>!prev) }, 1000);
+    clearTimeout(time)
+    time = setTimeout(()=>{ setUrlLoaded((prev)=>!prev) }, 3000);
+    
   }
 
 
