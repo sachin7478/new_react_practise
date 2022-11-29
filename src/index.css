@@ -42,9 +42,9 @@
 .create-note div {
   display: flex;
 }
-.create-note div textarea {
+.create-note div textarea, .createPost textarea {
   padding:5px;
-  min-width: 250px;
+  min-width: 400px;
   font-size:21px;
   border-radius: 5%;
   border: none;
@@ -55,4 +55,26 @@
   font-size:21px;
   color: #16123f; /*rgb(14, 132, 14);*/
   font-weight:700;
+}
+
+.todoSection {
+  display:flex;
+  flex-flow:column;
+  align-items: center;
+  font-size: 22px;
+}
+.todoSection input {
+  padding: 10px;
+  font-size: 24px;
+  margin:10px;
+  width:70%;
+}
+.listContainer ul {
+  list-style: none;
+  padding: 0px;
+}
+.listItem {
+  display:flex;
+  justify-content: center;
+  /* padding: 15px; */
 }

@@ -1,5 +1,6 @@
 import NoteApp from "../components/NoteApp";
 import GitUsers from "../components/GitUsers";
+import PostsApp from "../components/oAuthPosts/PostsApp";
 const config = {
   header:{},
   sidebar:{
@@ -17,6 +18,13 @@ const config = {
         name: 'git_hub_user',
         desc: 'To show the git hub user details using api',
         title: 'Github User Details'
+      },
+      {
+        component: PostsApp,
+        view_name: 'OAuth Posts',
+        name: 'google_oauth',
+        desc: 'OAuth Posts with OAuth 2.0',
+        title: 'OAuth Posts with OAuth 2.0'
       }
     ]
   }
