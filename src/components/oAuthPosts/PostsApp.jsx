@@ -2,11 +2,12 @@
 import { useState, useEffect } from 'react';
 import { gapi } from 'gapi-script';
 import { LoginButton, LogoutButton } from './GoogleButtons';
+import Jubmotron from '../../common/Jumbotron';
 import Post from './Post';
 const clientId = '827262915666-dgloc2amhv3787fanp4ttsg3q660mc1d.apps.googleusercontent.com';
 
 
-const PostsApp = () => {
+const PostsApp = (props) => {
   const [profile, setProfile] = useState({});
   const [token, setToken] = useState('');
   const [posts, setPosts] = useState([]);
@@ -67,6 +68,7 @@ const PostsApp = () => {
   }
 
   return(<>
+    <Jubmotron config={props.config}/>
     <div className="d-flex justify-content-between">
     <h2 className="text-info">{token && 'Welcome'} { profile?.givenName} {profile?.familyName}</h2>
     {!token && <LoginButton loadLoginData={loadLoginData}/>}
@@ -94,10 +96,14 @@ const PostsApp = () => {
     </div>
 
     {/* listing */}
-    <div className="d-flex justy-content-center mt-3 ">
-      {posts.map((currentPost, index) => {
-        return <Post key={index} token={token} post={currentPost} editPost={editPost} removePost={removePost}/>
-      })}
+    <div className="d-flex justy-content-center mt-3">
+      <div className="container">
+        <div className="row">
+          {posts.map((currentPost, index) => {
+            return <Post key={index} token={token} post={currentPost} editPost={editPost} removePost={removePost}/>
+          })}
+        </div>
+      </div>
       
     </div>
   </>)

@@ -1,6 +1,7 @@
 import NoteApp from "../components/NoteApp";
 import GitUsers from "../components/GitUsers";
 import PostsApp from "../components/oAuthPosts/PostsApp";
+import AlpineApp from "../components/AlpineApp";
 const config = {
   header:{},
   sidebar:{
@@ -25,7 +26,14 @@ const config = {
         name: 'google_oauth',
         desc: 'OAuth Posts with OAuth 2.0',
         title: 'OAuth Posts with OAuth 2.0'
-      }
+      },
+      {
+        component: AlpineApp,
+        view_name: 'Alpine JS demo',
+        name: 'alpine_js_demo',
+        desc: 'Hands on and practicing alpine js',
+        title: 'Alpine Js demo'
+      },
     ]
   }
 }
