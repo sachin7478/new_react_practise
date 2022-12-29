@@ -1,4 +1,4 @@
-const initialTabState = {selectedTab: ''}
+const initialTabState = {selectedTab: 'address'}
 const tabReducer = (state = initialTabState, action) => {
   switch (action.type) {
     case 'tabSelection':
@@ -7,7 +7,7 @@ const tabReducer = (state = initialTabState, action) => {
       }
     default:
       return {
-        selectedTab: 'alpine_js_demo'
+        selectedTab: 'note_app'
       }
   }
 };
