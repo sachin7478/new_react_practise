@@ -27,7 +27,7 @@ const GitUsers = (props) => {
   let userIdchanged = (e) => {
     setState((prev) => { return {...prev, user:e.target.value}});
     clearTimeout(time)
-    time = setTimeout(()=>{ setUrlLoaded((prev)=>!prev) }, 3000);
+    time = setTimeout(()=>{ setUrlLoaded((prev)=>!prev) }, 1000);
     
   }
 
